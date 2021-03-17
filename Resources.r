@@ -1,0 +1,1 @@
+Include "Resources.rsrc";
