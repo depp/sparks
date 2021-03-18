@@ -4,7 +4,7 @@
 
 
 
-ObjDir = :
+ObjDir = :Objects:
 Includes =
 
 Sym-PPC = -sym off
