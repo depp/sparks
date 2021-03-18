@@ -169,3 +169,144 @@ Dependencies  ƒ  $OutOfDate
 		{SrcFiles}
 
 
+#*** Dependencies: Cut here ***
+# These dependencies were produced at 1:01:32 PM on Thu, Mar 18, 2021 by MakeDepend
+
+:Objects:Draw.cpp.x :Objects:Draw.cpp.o	ƒ  ∂
+	:Draw.cpp ∂
+	:Entity.h ∂
+	:Header.h ∂
+	:Vectors.h ∂
+	:Viewpoint.h ∂
+	:Draw.h ∂
+	:Game.h
+
+:Objects:Entity.cpp.x :Objects:Entity.cpp.o	ƒ  ∂
+	:Entity.cpp ∂
+	:Entity.h ∂
+	:Header.h ∂
+	:Params.h ∂
+	:Draw.h ∂
+	:Game.h ∂
+	:Vectors.h
+
+:Objects:Explosion.cpp.x :Objects:Explosion.cpp.o	ƒ  ∂
+	:Explosion.cpp ∂
+	:Explosion.h ∂
+	:Header.h ∂
+	:PaletteTable.h ∂
+	:Sparks.h ∂
+	:Entity.h ∂
+	:Vectors.h ∂
+	:Draw.h ∂
+	:Game.h
+
+:Objects:Game.cpp.x :Objects:Game.cpp.o	ƒ  ∂
+	:Game.cpp ∂
+	:Game.h ∂
+	:Entity.h ∂
+	:Graphics.h ∂
+	:Header.h ∂
+	:Input.h ∂
+	:Params.h ∂
+	:Sparks.h ∂
+	:Stars.h ∂
+	:Vectors.h ∂
+	:Viewpoint.h ∂
+	:Draw.h
+
+:Objects:Graphics.cpp.x :Objects:Graphics.cpp.o	ƒ  ∂
+	:Graphics.cpp ∂
+	:Graphics.h ∂
+	:Header.h ∂
+	:PaletteTable.h ∂
+	:ResourceList.h
+
+:Objects:Input.cpp.x :Objects:Input.cpp.o	ƒ  ∂
+	:Input.cpp ∂
+	:Input.h ∂
+	:Header.h
+
+:Objects:Main.cpp.x :Objects:Main.cpp.o	ƒ  ∂
+	:Main.cpp ∂
+	:Main.h ∂
+	:Entity.h ∂
+	:Graphics.h ∂
+	:Header.h ∂
+	:Params.h ∂
+	:Player.h ∂
+	:ResourceList.h ∂
+	:Scenery.h ∂
+	:Sparks.h ∂
+	:Stars.h ∂
+	:Vectors.h ∂
+	:Viewpoint.h ∂
+	:Draw.h ∂
+	:Game.h
+
+:Objects:PaletteTable.cpp.x :Objects:PaletteTable.cpp.o	ƒ  ∂
+	:PaletteTable.cpp
+
+:Objects:Player.cpp.x :Objects:Player.cpp.o	ƒ  ∂
+	:Player.cpp ∂
+	:Player.h ∂
+	:Entity.h ∂
+	:Explosion.h ∂
+	:Header.h ∂
+	:Input.h ∂
+	:PaletteTable.h ∂
+	:Sparks.h ∂
+	:Vectors.h ∂
+	:Viewpoint.h ∂
+	:Draw.h ∂
+	:Game.h
+
+:Objects:Scenery.cpp.x :Objects:Scenery.cpp.o	ƒ  ∂
+	:Scenery.cpp ∂
+	:Scenery.h ∂
+	:Entity.h ∂
+	:Header.h ∂
+	:PaletteTable.h ∂
+	:Vectors.h ∂
+	:Draw.h ∂
+	:Game.h
+
+:Objects:Sound.cpp.x :Objects:Sound.cpp.o	ƒ  ∂
+	:Sound.cpp
+
+:Objects:Sparks.cpp.x :Objects:Sparks.cpp.o	ƒ  ∂
+	:Sparks.cpp ∂
+	:Sparks.h ∂
+	:Draw.h ∂
+	:Game.h ∂
+	:Header.h ∂
+	:Vectors.h ∂
+	:Viewpoint.h ∂
+	:Entity.h
+
+:Objects:Stars.cpp.x :Objects:Stars.cpp.o	ƒ  ∂
+	:Stars.cpp ∂
+	:Stars.h ∂
+	:Entity.h ∂
+	:Header.h ∂
+	:PaletteTable.h ∂
+	:Params.h ∂
+	:Vectors.h ∂
+	:Viewpoint.h ∂
+	:Draw.h ∂
+	:Game.h
+
+:Objects:Vectors.cpp.x :Objects:Vectors.cpp.o	ƒ  ∂
+	:Vectors.cpp ∂
+	:Vectors.h
+
+:Objects:Viewpoint.cpp.x :Objects:Viewpoint.cpp.o	ƒ  ∂
+	:Viewpoint.cpp ∂
+	:Viewpoint.h ∂
+	:Entity.h ∂
+	:Header.h ∂
+	:Params.h ∂
+	:Vectors.h ∂
+	:Draw.h ∂
+	:Game.h
+
