@@ -5,14 +5,14 @@
 /*                     Headers                      */
 /****************************************************/
 
-#include "Vectors.h"
 #include "Entity.h"
+#include "Vectors.h"
 
 /****************************************************/
 /*                    Prototypes                    */
 /****************************************************/
 
-t_Entity *	E_Scenery_Create		(t_Vector2f& loc);
-void		E_Scenery_Draw			(t_Entity * e);
+t_Entity *E_Scenery_Create(t_Vector2f &loc);
+void E_Scenery_Draw(t_Entity *e);
 
 #endif

@@ -5,13 +5,13 @@
 /*                 Global Variables                 */
 /****************************************************/
 
-extern	long				gCurrentTime;
+extern long gCurrentTime;
 
 /****************************************************/
 /*                    Prototypes                    */
 /****************************************************/
 
-void		Start_Game				(void);
-void		Game_RunFrame			(void);
+void Start_Game(void);
+void Game_RunFrame(void);
 
 #endif

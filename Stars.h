@@ -5,8 +5,8 @@
 /*                    Prototypes                    */
 /****************************************************/
 
-void		Init_Stars				(void);
-void		Draw_Stars				(void);
-void		Terminate_Stars			(void);
+void Init_Stars(void);
+void Draw_Stars(void);
+void Terminate_Stars(void);
 
 #endif

@@ -2,7 +2,7 @@
 
 void Init_Sound (void)
 {
-	OSErr	e;
-	
-	e = SndNewChannel(&gSound_Chan
+    OSErr	e;
+
+    e = SndNewChannel(&gSound_Chan
 }*/

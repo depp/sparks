@@ -17,7 +17,7 @@ enum {
 enum {
 	kKeyState_Up,
 	kKeyState_Down,
-	kKeyState_StillDown
+	kKeyState_StillDown,
 };
 
 /****************************************************/
@@ -25,20 +25,20 @@ enum {
 /****************************************************/
 
 typedef struct {
-	char	keyCode;
-	char	command;
+	char keyCode;
+	char command;
 } t_Key;
 
 /****************************************************/
 /*                 Global Variables                 */
 /****************************************************/
 
-extern	char	gKeys[kKeyEnd];
+extern char gKeys[kKeyEnd];
 
 /****************************************************/
 /*                    Prototypes                    */
 /****************************************************/
 
-void		Update_Input			(void);
+void Update_Input(void);
 
 #endif
