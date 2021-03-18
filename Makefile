@@ -10,15 +10,16 @@ Includes =
 Sym-PPC = -sym off
 Sym-68K = -sym off
 
-CPlusOptions-PPC = {Includes} {Sym-PPC} 
+CPlusOptions-PPC = {Includes} {Sym-PPC} -bool on
 
-CPlusOptions-68K = {Includes} {Sym-68K} -model near 
+CPlusOptions-68K = {Includes} {Sym-68K} -bool on -model near
 
 ### Source Files ###
 
 SrcFiles = ∂
 	Draw.cpp ∂
 	Entity.cpp ∂
+	Error.cpp ∂
 	Explosion.cpp ∂
 	Game.cpp ∂
 	Graphics.cpp ∂
@@ -39,6 +40,7 @@ SrcFiles = ∂
 ObjFiles-PPC = ∂
 	"{ObjDir}Draw.cpp.x" ∂
 	"{ObjDir}Entity.cpp.x" ∂
+	"{ObjDir}Error.cpp.x" ∂
 	"{ObjDir}Explosion.cpp.x" ∂
 	"{ObjDir}Game.cpp.x" ∂
 	"{ObjDir}Graphics.cpp.x" ∂
@@ -56,6 +58,7 @@ ObjFiles-PPC = ∂
 ObjFiles-68K = ∂
 	"{ObjDir}Draw.cpp.o" ∂
 	"{ObjDir}Entity.cpp.o" ∂
+	"{ObjDir}Error.cpp.o" ∂
 	"{ObjDir}Explosion.cpp.o" ∂
 	"{ObjDir}Game.cpp.o" ∂
 	"{ObjDir}Graphics.cpp.o" ∂
@@ -140,6 +143,7 @@ Sparks.68k ƒƒ Resources.r Resources.rsrc
 
 "{ObjDir}Draw.cpp.x" "{ObjDir}Draw.cpp.o"  ƒ  Draw.cpp
 "{ObjDir}Entity.cpp.x" "{ObjDir}Entity.cpp.o"  ƒ  Entity.cpp
+"{ObjDir}Error.cpp.x" "{ObjDir}Error.cpp.o"  ƒ  Error.cpp
 "{ObjDir}Explosion.cpp.x" "{ObjDir}Explosion.cpp.o"  ƒ  Explosion.cpp
 "{ObjDir}Game.cpp.x" "{ObjDir}Game.cpp.o"  ƒ  Game.cpp
 "{ObjDir}Graphics.cpp.x" "{ObjDir}Graphics.cpp.o"  ƒ  Graphics.cpp

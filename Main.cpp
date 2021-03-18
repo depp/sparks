@@ -4,6 +4,7 @@
 
 #include "Main.h"
 #include "Entity.h"
+#include "Error.h"
 #include "Graphics.h"
 #include "Header.h"
 #include "Params.h"
@@ -70,15 +71,8 @@ int main(void) {
 
 // Initialize everything
 void Initialize(void) {
-	OSErr error;
+	OSErr err;
 	SysEnvRec theWorld;
-
-	// See if we have color Quick
-	error = SysEnvirons(1, &theWorld);
-	if (theWorld.hasColorQD == false) {
-		SysBeep(50);
-		GracefulExit();
-	}
 
 	// Initialize needed managers
 	InitGraf(&qd.thePort);
@@ -89,6 +83,12 @@ void Initialize(void) {
 	InitDialogs(nil);
 	InitCursor();
 	MaxApplZone();
+
+	// See if we have color QuickDraw.
+	err = SysEnvirons(1, &theWorld);
+	if (!theWorld.hasColorQD) {
+		ExitError(kErrNoColorQD);
+	}
 
 	// Initialize random seed
 	GetDateTime((unsigned long *)&qd.randSeed);
@@ -107,16 +107,22 @@ void Initialize(void) {
 
 	gTheDevice = GetGDevice();
 
-	if (!HasDepth(gTheDevice, 8, 0, 1))
-		GracefulExit();
-	if ((gOldDepth = ((**((**gTheDevice).gdPMap)).pixelSize)) != 8)
-		if (Alert(400, NULL) == 1)
-			error = SetDepth(gTheDevice, 8, 0, 1);
-		else
-			GracefulExit();
-
-	if (error)
-		GracefulExit();
+	if (!HasDepth(gTheDevice, 8, 1, 1)) {
+		ExitError(kErrNo8Bit);
+	}
+	gOldDepth = (**(**gTheDevice).gdPMap).pixelSize;
+	if (gOldDepth != 8) {
+		switch (Alert(rALRT_ChangeDepth, NULL)) {
+		case 1:
+			break;
+		default:
+			ExitToShell();
+		}
+		err = SetDepth(gTheDevice, 8, 1, 1);
+		if (err != 0) {
+			ExitErrorOS(kErrNone, err);
+		}
+	}
 
 	if (!((qd.screenBits.bounds.right == 640) &&
 	      (qd.screenBits.bounds.left == 0) &&
@@ -142,10 +148,11 @@ void Initialize(void) {
 	EraseRect(&gWindRect);
 
 	// Create back buffer
-	error = NewGWorld(&gBackBuffer, 8, &gBufferRect, gCTable, gTheDevice,
-	                  noNewDevice);
-	if (error != 0)
+	err = NewGWorld(&gBackBuffer, 8, &gBufferRect, gCTable, gTheDevice,
+	                noNewDevice);
+	if (err != 0) {
 		GracefulExit();
+	}
 
 	NSetPalette((WindowPtr)gBackBuffer, gPalette, pmNoUpdates);
 
