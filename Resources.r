@@ -74,3 +74,24 @@ resource 'STR#' (rSTRS_Errors, purgeable) {{
 	"This game requires a monitor that supports 256 colors.",
 	"Could not change monitor depth.",
 }};
+
+resource 'SIZE' (-1) {
+	dontSaveScreen,
+	acceptSuspendResumeEvents,
+	enableOptionSwitch,
+	canBackground,
+	multiFinderAware,
+	backgroundAndForeground,
+	dontGetFrontClicks,
+	ignoreChildDiedEvents,
+	is32BitCompatible,
+	notHighLevelEventAware,
+	onlyLocalHLEvents,
+	notStationeryAware,
+	dontUseTextEditServices,
+	notDisplayManagerAware,
+	reserved,
+	reserved,
+	384 * 1024,
+	384 * 1024
+};
