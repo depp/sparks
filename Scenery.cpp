@@ -12,7 +12,7 @@
 /*                    Main Code                     */
 /****************************************************/
 
-t_Entity *E_Scenery_Create(t_Vector2f &loc) {
+t_Entity *E_Scenery_Create(t_Vector2f loc) {
 	t_Entity *e;
 
 	e = Entity_Create();

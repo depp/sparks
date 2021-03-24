@@ -23,7 +23,9 @@
 /*                 Global Variables                 */
 /****************************************************/
 
+#if !__MWERKS__
 QDGlobals qd;
+#endif
 
 GDHandle gTheDevice;
 WindowPtr gWindPtr;

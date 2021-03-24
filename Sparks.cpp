@@ -77,7 +77,7 @@ void Terminate_Sparks(void) {
 	DisposePtr((Ptr)gSparks);
 }
 
-void Sparks_Create(long type, long count, t_Vector2f &pos, t_Vector2f &vel,
+void Sparks_Create(long type, long count, t_Vector2f &pos, t_Vector2f vel,
                    float randVel) {
 	int i;
 	t_SparkGroup *s;

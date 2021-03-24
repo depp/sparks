@@ -33,7 +33,10 @@ const int kShotTime = 25;
 
 const float kBounce = 0.6;
 
-enum { kPlayerColor = kPltt_White, kPlayerShotColor = kPltt_Cyan };
+enum {
+	kPlayerColor = kPltt_White,
+	kPlayerShotColor = kPltt_Cyan,
+};
 
 /****************************************************/
 /*                 Global Variables                 */
@@ -57,7 +60,7 @@ void E_Init_Player(void) {
 
 // Creates a new player character
 // dir should be normalized
-t_Entity *E_Player_Create(t_Vector2f &loc, t_Vector2f &dir) {
+t_Entity *E_Player_Create(t_Vector2f loc, t_Vector2f dir) {
 	t_Entity *e;
 
 	e = Entity_Create();
