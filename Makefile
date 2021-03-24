@@ -34,6 +34,8 @@ SrcFiles = ∂
 	Vectors.cpp ∂
 	Viewpoint.cpp
 
+RFiles = ∂
+	Resources.r
 
 ### Object Files ###
 
@@ -117,8 +119,8 @@ Sparks.ppc ƒƒ {ObjFiles-PPC} {LibFiles-PPC}
 		-t 'APPL' ∂
 		-c '????'
 
-Sparks.ppc ƒƒ Resources.r Resources.rsrc
-	Rez -o {Targ} -a Resources.r
+Sparks.ppc ƒƒ {RFiles} Resources.rsrc
+	Rez -o {Targ} -a {RFiles}
 
 Sparks.68k ƒƒ {ObjFiles-68K} {LibFiles-68K}
 	ILink ∂
@@ -136,8 +138,8 @@ Sparks.68k ƒƒ {ObjFiles-68K} {LibFiles-68K}
 		ILinkToSYM {Targ}.NJ -mf -sym 3.2 -c 'sade'
 	End
 
-Sparks.68k ƒƒ Resources.r Resources.rsrc
-	Rez -o {Targ} -a Resources.r
+Sparks.68k ƒƒ {RFiles} Resources.rsrc
+	Rez -o {Targ} -a {RFiles}
 
 ### Required Dependencies ###
 
