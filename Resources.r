@@ -2,6 +2,7 @@
 
 #include "Dialogs.r"
 #include "MacTypes.r"
+#include "Processes.r"
 
 Include "Resources.rsrc";
 
